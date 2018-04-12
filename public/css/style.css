@@ -1,0 +1,216 @@
+
+.blue{
+	background-color: #0090da;	
+}
+.blue li a{
+	color:#80d3f0;
+}
+.khung{
+	float: left;
+	margin: 10px 25px;
+}
+.khung-monan{
+	float: left;
+	margin: 10px 15px;
+}
+
+/*START css của TODOLIST*/
+/* Include the padding and border in an element's total width and height */
+.list {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+ul#myUL li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul#myUL li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul#myUL li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul#myUL li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul#myUL li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/*END css của TODOLIST*/
+
+
+/*START css của FILTER ELEMENTS*/
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 15px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container-cho_ngoi {
+  margin-top: 20px;
+  overflow: auto;
+
+}
+.container-thuc_don {
+  margin-top: 20px;
+  overflow: hidden;
+  height: 530px
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+/*END css của FILTER ELEMENTS*/
+
+.filterDiv.ma_loai1,.ma_loai2,.ma_loai3,.ma_loai4,.ma_loai5,.ma_loai6{
+	line-height:normal;
+	width: 150px;
+	height: 200px;
+	color: #2b13e6;
+	background-color:#e2b094;
+	margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 22px;
+    
+}
+.col-md-6.fix{
+  /*background-color: yellow;*/
+  height: 610px;
+  overflow-y:scroll;
+
+}
+.container-cho_ngoi {
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 530px;
+    /*background-color: chartreuse;*/
+}
+.container-thuc_don {
+    margin-top: 20px;
+    overflow-y:scroll;
+    height: 530px;
+    /*background-color: rebeccapurple;*/
+}
+.filterDiv{
+    width: 150px;
+	margin:26px;
+}
+
+.container-fluid{
+	background-color:#eafbd8;
+}

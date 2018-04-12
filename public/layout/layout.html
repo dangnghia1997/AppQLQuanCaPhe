@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Layout QLQuanCaphe</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="../js/filterElements.js"></script>
+  	<!--<script src="../js/todolist.js"></script>-->
+  	<script src="../js/jquery.min.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			filterSelection('all');
+			var vi_tri_duoc_chon="";
+			//tính cho lầu 1
+			$(".filterDiv.lau_1").click(function(){
+				var ban=($(this).text());
+				vi_tri_duoc_chon="Lầu 1  /  " +ban; 
+				$("#ban_duoc_chon").addClass("active").html("<a data-toggle='tab' >"+vi_tri_duoc_chon+"</a>");
+			})
+
+			//tính cho lầu 2
+			$(".filterDiv.lau_2").click(function(){
+				var ban=($(this).text());
+				vi_tri_duoc_chon="Lầu 2  /  " +ban; 
+				$("#ban_duoc_chon").addClass("active").html("<a data-toggle='tab' >"+vi_tri_duoc_chon+"</a>");
+			})
+			//tính cho lầu 3
+			$(".filterDiv.lau_3").click(function(){
+				var ban=($(this).text());
+				vi_tri_duoc_chon="Lầu 3  /  " +ban; 
+				$("#ban_duoc_chon").addClass("active").html("<a data-toggle='tab' >"+vi_tri_duoc_chon+"</a>");
+			})
+			////tính cho lầu 4
+			$(".filterDiv.lau_4").click(function(){
+				var ban=($(this).text());
+				vi_tri_duoc_chon="Lầu 4  /  " +ban; 
+				$("#ban_duoc_chon").addClass("active").html("<a data-toggle='tab' >"+vi_tri_duoc_chon+"</a>");
+			})
+
+			//chuyen du lieu qua thanh toan
+			//them 1 dong
+			/*
+			var i = 1;
+			$(".filterDiv.tra").click(function(){
+
+
+				var ten_sp=$("#ten_sp").text();
+				var don_gia_sp=$("#don_gia_sp").text();
+				 $("#them").append("<tr id='removeRow"+i+"'><td>"+ i +"</td><td><a ><i id='remove"+i+"' class='fa fa-times xoa'></i></a></td><td>"+ten_sp+"</td><td>số lượng</td><td>"+don_gia_sp+"</td><td>soluong*"+don_gia_sp+"</td></tr>");
+				 
+				 var idMon = 'ten_mon' + i
+
+				 ban.chitietban[0].monan.idMon[i - 1] = idMon;
+
+				 console.log(ban);
+				 i++; //them 1 id
+
+			});
+
+			//remove dung dong minh click
+			$(document).on('click', '.xoa', (event)=>{
+				// $('#removeRow3+tr').remove()
+				// $('#removeRow3').remove()
+				var id = event.target.id.toString()
+				id = id.slice(6, id.length);
+				var xoa = 'removeRow' + id;
+				$('#'+xoa).remove()
+
+				// console.log($('#them tr').length)
+				//lay cac dong trong phan tbody dathem, tra so tt ve 1 duyet tiep
+				var mangTr = $('#them tr')
+				// console.log(mangTr)
+				var idx = 1;
+				mangTr.each(function(){
+					var td = $(this).children('td:first');
+					td.text(idx);
+					idx++;
+				})
+
+				i--;//xoa 1 id
+			})
+			*/
+			
+		})
+	</script>
+	
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row blue">
+			<!-- phần thực đơn và lựa chỗ -->
+			<div class="col-md-6">1
+				<ul class="nav nav-tabs blue">
+				    <li class="active"><a data-toggle="tab" href="#cho_ngoi">CHỖ NGỒI</a></li>
+				    <li><a data-toggle="tab" href="#thuc_don">THỰC ĐƠN</a></li>
+  				</ul>
+			</div>
+			<!-- end phần thực đơn và lựa chỗ -->
+
+			<!-- phần thanh toán -->
+			<div class="col-md-6">
+				<h4>Ten Nhan Vien ca truc</h4>
+			</div>
+			<!-- phần thanh toán -->
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">3
+				<div class="tab-content">
+					<!--START cho_ngoi -->
+				    <div id="cho_ngoi" class="tab-pane active">
+				    	<div id="myBtnContainer-cho_ngoi">
+						  <button class="btn active" onclick="filterSelection('all')" >Tất cả</button>
+						  <button class="btn" onclick="filterSelection('lau_1')">Lầu 1</button>
+						  <button class="btn" onclick="filterSelection('lau_2')">Lầu 2</button>
+						  <button class="btn" onclick="filterSelection('lau_3')">Lầu 3</button>
+						  <button class="btn" onclick="filterSelection('lau_4')">Lầu 4</button>
+						</div>
+
+						<div class="container-cho_ngoi">
+								<!--START Lầu 1 -->
+						  <a href="#"><div class="filterDiv lau_1" id='banso1'>Bàn số 1</div></a>
+						  <a href="#"><div class="filterDiv lau_1" id='banso2'>Bàn số 2</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 3</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 4</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 5</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 6</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 7</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 8</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 9</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 10</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 11</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 12</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 13</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 14</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 15</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 16</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 17</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 18</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 19</div></a>
+						  <a href="#"><div class="filterDiv lau_1">Bàn số 20</div></a>
+								<!--START Lầu 1 -->
+						  
+						  <!--START Lầu 2 -->
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 21</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 22</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 23</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 24</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 25</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 26</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 27</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 28</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 29</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 30</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 31</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 32</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 33</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 34</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 35</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 36</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 37</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 38</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 39</div></a>
+						  <a href="#"><div class="filterDiv lau_2">Bàn số 40</div></a>
+								<!--START Lầu 2 -->
+
+										<!--START Lầu 3 -->
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 41</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 42</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 43</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 44</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 45</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 46</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 47</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 48</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 49</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 50</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 51</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 52</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 53</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 54</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 55</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 56</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 57</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 58</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 59</div></a>
+						  <a href="#"><div class="filterDiv lau_3">Bàn số 60</div></a>
+								<!--START Lầu 3 -->
+						  
+						  <!--START Lầu 4 -->
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 61</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 62</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 63</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 64</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 65</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 66</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 67</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 68</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 69</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 70</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 71</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 72</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 73</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 74</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 75</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 76</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 77</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 78</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 79</div></a>
+						  <a href="#"><div class="filterDiv lau_4">Bàn số 80</div></a>
+								<!--START Lầu 4 -->
+						</div>
+				    </div>
+				    <!--START cho_ngoi -->
+
+				    <!--START thuc_don-->
+				    <div id="thuc_don" class="tab-pane fade">
+				      	<div id="myBtnContainer-thuc_don">
+						  <button class="btn active" onclick="filterSelection('all')">Tất cả</button>
+						  <button class="btn" onclick="filterSelection('tra')">Trà</button>
+						  <button class="btn" onclick="filterSelection('da_xay')">Đá xay</button>
+						  <button class="btn" onclick="filterSelection('ca_phe')">Cà phê</button>
+						  <button class="btn" onclick="filterSelection('caphe-espresso')">Cà Phê Máy</button>
+						  <button class="btn" onclick="filterSelection('thuc_uong_khac')">Thức uống khác</button>
+						  <button class="btn" onclick="filterSelection('banh_ngot')">Bánh Ngọt</button>
+						</div>
+						<div class="container-thuc_don">
+							<!--START Loại Trà-->
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p id="ten_sp">Trà chanh mật ong</p>
+								  	<p id="don_gia_sp">35000</p>
+							  	</div>
+							</a>
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p>Trà chanh mật ong</p>
+								  	<p>35000</p>
+							  	</div>
+							</a>
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p>Trà chanh mật ong</p>
+								  	<p>35000</p>
+							  	</div>
+							</a>
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p>Trà chanh mật ong</p>
+								  	<p>35000</p>
+							  	</div>
+							</a>
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p>Trà chanh mật ong</p>
+								  	<p>35000</p>
+							  	</div>
+							</a>
+							<a href="#">
+							  	<div class="filterDiv tra">
+								  	<img src="../images/anh_thuc_uong/iced-tea.jpg">
+								  	<p>Trà chanh mật ong</p>
+								  	<p>35000</p>
+							  	</div>
+							</a>
+
+						 	<!--END Loại Trà-->
+
+						 	<!-- START Freeze -->
+						 	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+						  	<div class="filterDiv da_xay">
+							  	<img src="../images/anh_thuc_uong/Ice_Blended_Espresso_Drink_Mocha.jpg">
+							  	<p>Mocha</p>
+							  	<p>55000</p>
+						  	</div>
+
+						 	<!-- END Freeze -->
+
+						 	<!-- START Cà phê -->
+						 	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_den.jpeg">
+							  	<p>Phin đen Đá</p>
+							  	<p>19000</p>
+						  	</div>
+						  	<div class="filterDiv ca_phe">
+							  	<img src="../images/anh_thuc_uong/ca_phe_sua.jpg">
+							  	<p>Phin Sữa đá</p>
+							  	<p>21000</p>
+						  	</div>
+						 	<!-- END Cà phê -->
+
+						 	<!-- START Cà phê Máy -->
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/latte.jpg">
+							  	<p>Latte</p>
+							  	<p>43000</p>
+						  	</div>
+						  	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/espresso.jpg">
+							  	<p>Espresso</p>
+							  	<p>35000</p>
+						  	</div>
+						 	<div class="filterDiv caphe-espresso">
+							  	<img src="../images/anh_thuc_uong/capuchino.jpg">
+							  	<p>Cappuchino</p>
+							  	<p>39000</p>
+						  	</div>
+						 	<!-- END Cà phê Máy -->
+
+						 	<!-- START Thức uống khác -->
+						 	<div class="filterDiv thuc_uong_khac">
+							  	<img src="../images/anh_thuc_uong/red-bull.jpg">
+							  	<p>RED-BULL</p>
+							  	<p>20000</p>
+						  	</div>
+						  	<div class="filterDiv thuc_uong_khac">
+							  	<img src="../images/anh_thuc_uong/7-up.jpg">
+							  	<p>7-UP</p>
+							  	<p>15000</p>
+						  	</div>
+						  	<div class="filterDiv thuc_uong_khac">
+							  	<img src="../images/anh_thuc_uong/fanta.jpg">
+							  	<p>FANTA</p>
+							  	<p>15000</p>
+						  	</div>
+						  	<div class="filterDiv thuc_uong_khac">
+							  	<img src="../images/anh_thuc_uong/cocacola-life.jpg">
+							  	<p>Coca Cola Life</p>
+							  	<p>20000</p>
+						  	</div>
+						 	<!-- END Thức uống khác -->
+
+						 	<!-- START Bánh Ngọt -->
+						 	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/passioncheese.jpg">
+							  	<p>Passion Cheese Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/strawberry.jpg">
+							  	<p>Strawberry Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/tiramisu.jpg">
+							  	<p>Tiramisu Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/passioncheese.jpg">
+							  	<p>Passion Cheese Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/strawberry.jpg">
+							  	<p>Strawberry Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/tiramisu.jpg">
+							  	<p>Tiramisu Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/passioncheese.jpg">
+							  	<p>Passion Cheese Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/strawberry.jpg">
+							  	<p>Strawberry Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/tiramisu.jpg">
+							  	<p>Tiramisu Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/passioncheese.jpg">
+							  	<p>Passion Cheese Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/strawberry.jpg">
+							  	<p>Strawberry Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						  	<div class="filterDiv banh_ngot">
+							  	<img src="../images/anh_thuc_an/tiramisu.jpg">
+							  	<p>Tiramisu Cake</p>
+							  	<p>25000</p>
+						  	</div>
+						 	<!-- END Bánh Ngọt -->
+						</div>
+				    </div>
+				    <!--END thuc_don-->
+  				</div>
+			</div>
+			<div class="col-md-6 fix" >4
+				<h1 id="ban_duoc_chon"></h1>
+				<table class="table table-hover">
+				    <thead>
+				      <tr>
+				        <th>STT</th>
+				        <th></th>
+				        <th>Tên mặt hàng</th>
+				        <th>Số lượng</th>
+				        <th>Đơn giá</th>
+				        <th>Thành tiền</th>
+				      </tr>
+				    </thead>
+				    <tbody id="them">
+				     <!--<tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>-->
+				     
+				    </tbody>
+  				</table>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="col-md-6">5</div>
+		<div class="col-md-6" style="padding-right: 0px;padding-left:0px">
+			<div class="btn_thanh_toan" style="width: 100%;background-color: red;height: 50px">
+				<button style="margin: 15px;padding: 20px 58px;" type="button" class="btn btn-success">Thanh Toán (F9)</button>
+				<button style="margin: 15px;padding: 20px 30px;" type="button" class="btn btn-danger">Thông Báo</button>
+				<button style="margin: 15px;padding: 20px 35px;" type="button" class="btn btn-primary">Chuyển Ghép Bàn</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
