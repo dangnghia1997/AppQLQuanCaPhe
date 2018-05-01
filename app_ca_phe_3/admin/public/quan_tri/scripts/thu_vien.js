@@ -1,0 +1,39 @@
+// JavaScript Document
+function Xoa_user(id)
+{
+	var x=confirm("Hành động nãy sẽ làm mất dữ liệu!\n Bạn chắc chứ?");
+	if(x==true)
+	{
+		window.location="xoa_user.php?id="+id;	
+	}
+	else
+	{
+		window.location="xem_ds_tai_khoan.php";		
+	}
+}
+
+function Xoa_loai_san_pham(ma_loai)
+{
+	var x=confirm("Hành động nãy sẽ làm mất dữ liệu!\n Bạn chắc chứ?");
+	if(x==true)
+	{
+		window.location="xoa_loai_san_pham.php?ma_loai="+ma_loai;	
+	}
+	else
+	{
+		window.location="xem_ds_loai_san_pham.php";		
+	}
+}
+
+function Xoa_lau(ma_lau)
+{
+	var x=confirm("Hành động nãy sẽ làm mất dữ liệu!\n Bạn chắc chứ?");
+	if(x==true)
+	{
+		window.location="xoa_lau.php?ma_lau="+ma_lau;	
+	}
+	else
+	{
+		window.location="xem_ds_lau.php";		
+	}
+}
